@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="6" parallel="tests" >
+    <test name="Test for Chrome browser">
+        <parameter name="browser" value="chrome" />
+        <packages>
+            <package name="amazonTest"></package>
+        </packages>
+    </test>
+    <test name="Test for Firefox browser">
+        <parameter name="browser" value="firefox" />
+        <packages>
+            <package name="amazonTest"></package>
+        </packages>
+    </test>
+    <test name="Test for Edge browser">
+        <parameter name="browser" value="Edge" />
+        <packages>
+            <package name="amazonTest"></package>
+        </packages>
+    </test>
+</suite>
