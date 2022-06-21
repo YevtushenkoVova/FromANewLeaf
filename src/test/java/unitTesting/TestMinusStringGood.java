@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 public class TestMinusStringGood {
 
     @Test
-    public void checkMinusStringGood(){
-        Assert.assertEquals(MinusStr.minusStringGood("qqqqGood"),"qqqq");
+    public void checkMinusStringGood() {
+        Assert.assertEquals(MinusStr.minusStringGood("qqqqGood"), "qqqq");
     }
 
     @Test
-    public void checkMinusStringGood2(){
-        Assert.assertEquals(MinusStr.minusStringGood("Goodaaaa"),"aaaa");
+    public void checkMinusStringGood2() {
+        Assert.assertEquals(MinusStr.minusStringGood("Goodaaaa"), "aaaa");
     }
 }
