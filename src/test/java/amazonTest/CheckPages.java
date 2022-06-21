@@ -27,4 +27,15 @@ public class CheckPages extends BaseTest {
 
         Assert.assertTrue(driver.getCurrentUrl().contains("computers"));
     }
+
+    @Test
+    public void checkBabyPage(){
+        openAmazon();
+        HomePage homePage = new HomePage(driver);
+        homePage.getBtnAllInHeader().click();
+        homePage.getBabyBtn().click();
+        homePage.getBtnSearch().click();
+
+        Assert.assertTrue(driver.getCurrentUrl().contains("baby"));
+    }
 }

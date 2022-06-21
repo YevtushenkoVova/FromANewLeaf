@@ -32,4 +32,17 @@ public class CheckSort extends BaseTest{
             Assert.assertTrue(element.getText().contains("Roku"));
         }
     }
+
+    @Test
+    public void checkBabyPage() {
+        openAmazon();
+        HomePage homePage = new HomePage(driver);
+        homePage.getBtnAllInHeader().click();
+        homePage.getBabyBtn().click();
+        homePage.getBtnSearch().click();
+        homePage.getFiltrePampers().click();
+        for(WebElement element: homePage.getListProduct()) {
+            Assert.assertTrue(element.getText().contains("Pampers"));
+        }
+    }
 }

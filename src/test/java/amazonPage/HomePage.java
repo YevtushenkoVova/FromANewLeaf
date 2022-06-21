@@ -79,4 +79,28 @@ public class HomePage extends BasePage {
     public List<WebElement> getListFiltreGermani(){
         return getElementsByXpath("//span[contains(text(),'German Edition')]");
     }
+
+    public WebElement getLinkChairs(){
+        return getElementByXpath("//img[@alt='Chairs']");
+    }
+
+    public WebElement getColorChairs(){
+        return getElementByXpath("//input[@name='3']");
+    }
+
+    public WebElement getAtributColor(){
+        return getElementByXpath("//span[text()='Color']");
+    }
+
+    public List<WebElement> getListLinkSee(){
+        return getElementsByXpath("//a[@class='a-link-normal see-more truncate-1line']");
+    }
+
+    public WebElement getBabyBtn(){
+        return getElementByXpath("//option[@value='search-alias=baby-products-intl-ship']");
+    }
+
+    public WebElement getFiltrePampers(){
+        return getElementByXpath("//span[text()='Pampers']");
+    }
 }
