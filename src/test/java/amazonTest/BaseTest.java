@@ -16,27 +16,25 @@ public class BaseTest {
 
     public WebDriver driver;
 
-    @BeforeMethod
+   // @BeforeMethod
     @Parameters("browser")
     public void initialization(String browser) {
         if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-            driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
-            driver.manage().window().maximize();
         }
+        driver.manage().window().maximize();
     }
 
-    //@BeforeMethod
+    @BeforeMethod
     public void setUp() {
-       initialization("chrome");
+        initialization("chrome");
     }
 
     @AfterMethod
