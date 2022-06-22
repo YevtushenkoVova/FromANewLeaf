@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckSort extends BaseTest{
+public class CheckSort extends BaseTest {
 
     @Test
     public void checkBooksPage() {
@@ -15,22 +15,20 @@ public class CheckSort extends BaseTest{
         homePage.getBooksBtn().click();
         homePage.getBtnSearch().click();
         homePage.getFiltreGermani().click();
-        for(WebElement element: homePage.getListFiltreGermani()){
-            Assert.assertTrue(element.getText().contains("German Edition"));
-        }
+
+        Assert.assertTrue(homePage.checkListContains(homePage.getListFiltreGermani(), "French Edition"));
     }
 
     @Test
-    public void checkCompPage(){
+    public void checkCompPage() {
         openAmazon();
         HomePage homePage = new HomePage(driver);
         homePage.getBtnAllInHeader().click();
         homePage.getComputersBtn().click();
         homePage.getBtnSearch().click();
         homePage.getFiltreHp().click();
-        for(WebElement element: homePage.getListProduct()){
-            Assert.assertTrue(element.getText().contains("Roku"));
-        }
+
+        Assert.assertTrue(homePage.checkListContains(homePage.getListProduct(), "Roku"));
     }
 
     @Test
@@ -41,8 +39,7 @@ public class CheckSort extends BaseTest{
         homePage.getBabyBtn().click();
         homePage.getBtnSearch().click();
         homePage.getFiltrePampers().click();
-        for(WebElement element: homePage.getListProduct()) {
-            Assert.assertTrue(element.getText().contains("Pampers"));
-        }
+
+        Assert.assertTrue(homePage.checkListContains(homePage.getListProduct(),"Pampers"));
     }
 }
