@@ -104,7 +104,6 @@ public class HomePage extends BasePage {
         return getElementByXpath("//span[text()='Pampers']");
     }
 
-    //"German Edition"
     public boolean checkListContains(List<WebElement> list, String text) {
         boolean result = false;
         for (WebElement element : list) {
